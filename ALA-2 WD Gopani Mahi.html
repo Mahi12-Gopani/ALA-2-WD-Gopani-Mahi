@@ -1,0 +1,492 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mahi Shop - With Voice</title>
+  <style>
+    body {
+      margin: 0;
+      background: #f1f2f6;
+      overflow: hidden;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .shop {
+      position: absolute;
+      top: 15%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 240px;
+      height: 240px;
+      background: #e67e22;
+      border: 5px solid #d35400;
+      border-radius: 15px;
+      text-align: center;
+      padding: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    }
+
+    .shop h2 {
+      color: white;
+      margin: 5px 0;
+    }
+
+    .items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 5px;
+    }
+
+    .item {
+      background: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    .customer {
+      width: 60px;
+      height: 100px;
+      position: absolute;
+      bottom: 20px;
+      font-size: 30px;
+      text-align: center;
+      transition: left 2s linear;
+    }
+
+    #c1 {
+      left: 10px;
+    }
+
+    #c2 {
+      right: 10px;
+    }
+
+    .label {
+      font-size: 14px;
+      margin-top: -5px;
+      color: #2d3436;
+    }
+
+    .message {
+      position: absolute;
+      top: 10px;
+      width: 100%;
+      text-align: center;
+      font-size: 18px;
+      color: #2d3436;
+    }
+
+    button {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 10px 20px;
+      font-size: 16px;
+      background: #0984e3;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .bill {
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: white;
+      border: 2px dashed #636e72;
+      padding: 10px;
+      width: 200px;
+      border-radius: 10px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="message" id="msg">🏪 Welcome to <strong>Mahi Shop</strong>!</div>
+
+  <div class="shop">
+    <h2>Mahi Shop</h2>
+    <div class="items">
+      <div class="item">🍎 Apple - ₹50</div>
+      <div class="item">🍌 Banana - ₹30</div>
+      <div class="item">🥭 Mango - ₹70</div>
+    </div>
+  </div>
+
+  Customers
+  <div class="customer" id="c1">🧍<div class="label">Customer 1</div></div>
+  <div class="customer" id="c2">🧍‍♀️<div class="label">Customer 2</div></div>
+
+  <!-- Bill -->
+  <!-- <div class="bill" id="billBox">
+    <strong>🧾 Bill</strong>
+    <p id="billText">...</p>
+  </div>
+
+  <button onclick="startScene()">Start Shopping</button>
+
+  <script>
+    const msg = document.getElementById("msg");
+    const c1 = document.getElementById("c1");
+    const c2 = document.getElementById("c2");
+    const billBox = document.getElementById("billBox"); -->
+    <!-- const billText = document.getElementById("billText");
+
+    function speak(text) {
+      const utter = new SpeechSynthesisUtterance(text);
+      utter.lang = "gu-IN"; // Gujarati accent, if available
+      speechSynthesis.speak(utter);
+    }
+
+    function updateMessage(text) {
+      msg.textContent = text;
+      speak(text);
+    }
+
+    function startScene() {
+      // Customer 1
+      c1.style.left = "44%";
+      updateMessage("Shopkeeper: Shu levu che bhai?");
+
+      setTimeout(() => {
+        updateMessage("Customer 1: Mane apple aapo.");
+      }, 2500);
+
+      setTimeout(() => {
+        updateMessage("Shopkeeper: Lo bhai apple!");
+      }, 4500);
+
+      setTimeout(() => {
+        updateMessage("Shopkeeper: Bill pachas rupiya.");
+        billText.textContent = "Customer 1 bought 🍎 Apple - ₹50";
+        billBox.style.display = "block";
+      }, 6000);
+
+      setTimeout(() => {
+        updateMessage("Customer 1: Aabhar! Hu javu chu.");
+        billBox.style.display = "none";
+        c1.style.left = "-70px";
+      }, 8000);
+
+      // Customer 2
+      setTimeout(() => {
+        updateMessage("Customer 2 aavi...");
+        c2.style.left = "54%";
+      }, 9500);
+
+      setTimeout(() => {
+        updateMessage("Shopkeeper: Shu levu che behen?");
+      }, 11500);
+
+      setTimeout(() => {
+        updateMessage("Customer 2: Mane mango aapo.");
+      }, 13500);
+
+      setTimeout(() => {
+        updateMessage("Shopkeeper: Lo behen mango!");
+      }, 15000);
+
+      setTimeout(() => {
+        updateMessage("Shopkeeper: Bill sattar rupiya.");
+        billText.textContent = "Customer 2 bought 🥭 Mango - ₹70";
+        billBox.style.display = "block";
+      }, 16500);
+
+      setTimeout(() => {
+        updateMessage("Customer 2: Thank you! Hu javu chu.");
+        billBox.style.display = "none";
+        c2.style.left = "120%";
+      }, 18500);
+
+      setTimeout(() => {
+        updateMessage("Dukkan bandh! Aabhar tamaro - Mahi Shop");
+      }, 20000);
+    }
+  </script>
+
+</body>
+</html> --> 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mahi Shop - Virtual Store</title>
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(#dff9fb, #c7ecee);
+      font-family: 'Segoe UI', sans-serif;
+      overflow-x: hidden;
+    }
+
+    .shop {
+      width: 300px;
+      background: #e67e22;
+      border: 5px solid #d35400;
+      border-radius: 15px;
+      text-align: center;
+      padding: 10px;
+      position: absolute;
+      left: 50%;
+      top: 10%;
+      transform: translateX(-50%);
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+      z-index: 10;
+    }
+
+    .shop h2 {
+      color: white;
+      margin-bottom: 10px;
+    }
+
+    .items {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .item {
+      background: white;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 8px;
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .item button {
+      margin-top: 10px;
+    }
+
+    .customer, .shopkeeper {
+      position: absolute;
+      font-size: 40px;
+      bottom: 150px;
+      transition: left 1s;
+      z-index: 10;
+    }
+
+    #customer {
+      left: -50px;
+    }
+
+    #shopkeeper {
+      right: 10px;
+    }
+
+    .msg {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      text-align: center;
+      background: #fdcb6e;
+      padding: 10px;
+      font-size: 18px;
+      z-index: 20;
+    }
+
+    .bill, .qr {
+      display: none;
+      background: white;
+      padding: 10px;
+      border: 2px dashed #636e72;
+      border-radius: 10px;
+      width: 200px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10;
+    }
+
+    .bill {
+      top: 75%;
+    }
+
+    .qr {
+      top: 85%;
+    }
+
+    .controls {
+      position: absolute;
+      bottom: 40px;
+      left: 10px;
+      z-index: 10;
+    }
+
+    .controls button {
+      padding: 10px 20px;
+      background: #0984e3;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+
+    .road {
+      position: absolute;
+      bottom: 0px;
+      width: 100%;
+      height: 20px;
+      background: #2d3436;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 24px;
+      z-index: 5;
+    }
+
+    .car {
+      font-size: 30px;
+      animation: drive 5s linear infinite;
+    }
+
+    @keyframes drive {
+      0% { transform: translateX(-100vw); }
+      100% { transform: translateX(100vw); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="msg" id="msg">Welcome to Mahi Shop!</div>
+
+  <div class="shop">
+    <h2>Mahi Shop</h2>
+    <div class="items">
+      <div class="item">Pen (₹50)<br><button onclick="selectItem('Pen', 50)">Select</button></div>
+      <div class="item">Notebook (₹30)<br><button onclick="selectItem('Notebook', 30)">Select</button></div>
+      <div class="item">Bottle (₹70)<br><button onclick="selectItem('Bottle', 70)">Select</button></div>
+    </div>
+  </div>
+
+  <div class="customer" id="customer">🧍‍♂️</div>
+  <div class="shopkeeper" id="shopkeeper">🧍‍🌾</div>
+
+  <div class="bill" id="bill"></div>
+  <div class="qr" id="qr">Scan the QR Code to Pay<br><img src="https://api.qrserver.com/v1/create-qr-code/?data=upi://pay&size=100x100" alt="QR"></div>
+
+  <div class="road">
+    <div class="car">🚗</div>
+    <div class="car" style="animation-delay: 2s">🚙</div>
+  </div>
+
+  <div class="controls">
+    <button onclick="startShopping()">Start Shopping</button>
+    <button onclick="finishShopping()" style="background: green;">Finish Shopping</button>
+  </div>
+
+  <audio id="bgm" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" autoplay loop></audio>
+
+  <script>
+    const msg = document.getElementById("msg");
+    const bill = document.getElementById("bill");
+    const qr = document.getElementById("qr");
+    const customer = document.getElementById("customer");
+    let cart = [];
+    let totalSales = 0;
+    let itemsSold = {};
+
+    function speak(text) {
+      const utter = new SpeechSynthesisUtterance(text);
+      utter.lang = "en-US";
+      speechSynthesis.speak(utter);
+    }
+
+    function updateMsg(text) {
+      msg.textContent = text;
+      speak(text);
+    }
+
+    function selectItem(item, price) {
+      cart.push({item, price});
+      if (!itemsSold[item]) itemsSold[item] = 0;
+      itemsSold[item]++;
+      updateBill();
+      updateMsg("Customer added " + item + " to the cart");
+    }
+
+    function updateBill() {
+      let total = cart.reduce((sum, i) => sum + i.price, 0);
+      bill.innerHTML = "<strong>Bill:</strong><br>" + cart.map(i => i.item + " - ₹" + i.price).join("<br>") + `<br><strong>Total: ₹${total}</strong>`;
+    }
+
+    function startShopping() {
+      cart = [];
+      customer.style.left = '30%';
+      updateMsg("Customer arrived. Please select items.");
+      bill.style.display = "block";
+      qr.style.display = "none";
+    }
+
+    function finishShopping() {
+      let total = cart.reduce((sum, i) => sum + i.price, 0);
+      if (total === 0) {
+        updateMsg("No items selected.");
+        return;
+      }
+
+      updateMsg("Total bill is ₹" + total);
+      setTimeout(() => {
+        let payMode = prompt("Total ₹" + total + ". Pay with: Type 'cash' or 'online'");
+        if (payMode && payMode.toLowerCase() === 'online') {
+          qr.style.display = "block";
+          updateMsg("Scan QR to pay");
+        } else {
+          updateMsg("Cash payment accepted. Returning change if needed...");
+        }
+
+        setTimeout(() => {
+          totalSales += total;
+          updateMsg("Thank you! Visit again!");
+          bill.style.display = "none";
+          qr.style.display = "none";
+          customer.style.left = '-50px';
+          cart = [];
+
+          setTimeout(() => {
+            endDay();
+          }, 4000);
+        }, 4000);
+      }, 1000);
+    }
+
+    function endDay() {
+      document.body.style.background = 'linear-gradient(#2c3e50, #34495e)';
+      const poster = document.createElement('div');
+      poster.style.position = 'absolute';
+      poster.style.top = '10%';
+      poster.style.left = '10%';
+      poster.style.width = '80%';
+      poster.style.height = '80%';
+      poster.style.background = '#fff';
+      poster.style.border = '5px solid #333';
+      poster.style.padding = '20px';
+      poster.style.zIndex = 999;
+      poster.style.overflowY = 'auto';
+
+      let summary = '<h2>Today\'s Sales Summary</h2><ul>';
+      for (let item in itemsSold) {
+        summary += `<li>${item} - ${itemsSold[item]} pcs</li>`;
+      }
+      summary += `</ul><strong>Total Sale: ₹${totalSales}</strong><br><br>Thank you from Mahi Shop!`;
+
+      poster.innerHTML = summary;
+      document.body.appendChild(poster);
+    }
+  </script>
+
+</body>
+</html>
+
